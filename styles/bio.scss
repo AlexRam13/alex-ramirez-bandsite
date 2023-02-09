@@ -33,6 +33,7 @@ ul,
 li,
 a {
     list-style: none;
+    padding: 0;
 }
 
 // Page Header
@@ -56,7 +57,7 @@ h2 {
 h3 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-    font-weight: 400;
+    font-weight: 600;
 }
 
 //Body Copy
@@ -64,4 +65,93 @@ p {
     font-size: 0.813rem;
     line-height: 1.125rem;
     font-weight: 400;
+    margin: 0;
+}
+
+//Images
+img {
+    display: block;
+    width: 100%;
+    padding: 1rem 0rem;
+}
+
+// Nav
+.nav {
+    background-color: #323232;
+    color: #ffffff;
+}
+
+.nav h1 {
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.nav li {
+    display: inline-block;
+    text-align: center;
+    padding: 0rem 2.3rem;
+    padding-bottom: 1rem;
+}
+
+
+
+
+//Main
+main {
+    max-width: 90%;
+    margin: auto;
+}
+
+.landing {
+    background-color: #fff;
+}
+
+.landing__about-text {
+    padding-top: 1.5rem;
+}
+
+
+// Main Flower Img
+#landing__image {
+    background: url(../Assets/Images/hero-bio.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50vh;
+    flex: 0 1 60vw;
+    margin: 0;
+    opacity: 50%;
+    // background-color: #323232
+
+}
+
+.title {
+    position: relative;
+    justify-content: center;
+    top: 13rem;
+    color: #fff;
+    background-color: black;
+    padding-left: 1rem;
+}
+
+
+
+// Footer
+.footer {
+    background-color: #323232;
+    color: #ffffff;
+    padding: 1rem 1rem;
+}
+
+.footer img {
+    display: inline-block;
+    height: 1.7rem;
+}
+
+.footer li {
+    display: inline-block;
+    padding: 0rem 1rem;
+    position: relative;
+    right: 1rem;
+
 }
