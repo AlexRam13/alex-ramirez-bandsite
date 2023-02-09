@@ -18,6 +18,7 @@ body {
     margin: 0px;
     padding: 0px;
     border: 0px;
+    height: auto;
 }
 
 // Reset Rule
@@ -25,4 +26,42 @@ body {
 *::before,
 *::after {
     box-sizing: border-box;
+}
+
+//lists
+ul,
+li,
+a {
+    list-style: none;
+}
+
+// Page Header
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+// Section Header
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+// Subheader
+h3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+}
+
+//Body Copy
+p {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-weight: 400;
 }
