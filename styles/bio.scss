@@ -98,7 +98,7 @@ img {
 
 //Main
 main {
-    max-width: 90%;
+    // max-width: 90%;
     margin: auto;
 }
 
@@ -113,25 +113,40 @@ main {
 
 // Main Flower Img
 #landing__image {
-    background: url(../Assets/Images/hero-bio.jpg);
+    background: url("../Assets/Images/hero-bio.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 50vh;
-    flex: 0 1 60vw;
-    margin: 0;
+    position: relative;
+    height: 50vw;
+
+
+
+
+
+}
+
+
+
+.overlay__color {
+    position: relative;
+    background-color: #323232;
+    height: 50vw;
+    // z-index: 0;
     opacity: 50%;
-    // background-color: #323232
+
 
 }
 
 .title {
-    position: relative;
+    // position: relative;
+    position: absolute;
     justify-content: center;
-    top: 13rem;
+    // top: 13rem;
+    top: 2.5rem;
     color: #fff;
-    background-color: black;
     padding-left: 1rem;
+    z-index: 2;
 }
 
 
