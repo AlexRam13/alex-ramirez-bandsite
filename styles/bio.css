@@ -1,0 +1,20 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../Assets/Font/AvenirNextLTPro-Bold.otf), url(../Assets/Font/AvenirNextLTPro-Demi.otf), url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
+html {
+  font-family: Avenir;
+}
+
+HTML,
+body {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}/*# sourceMappingURL=bio.css.map */
