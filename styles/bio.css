@@ -79,6 +79,14 @@ img {
   font-weight: 600;
   font-family: avenir__regular;
 }
+@media (min-width: 48rem) {
+  .nav h1 {
+    text-align: start;
+    position: relative;
+    top: 1.2rem;
+    padding-left: 2.25rem;
+  }
+}
 
 .nav ul {
   margin-bottom: 0;
@@ -92,6 +100,14 @@ img {
   font-family: avenir__regular;
   padding: 0rem 2.3rem;
   padding-bottom: 1rem;
+}
+@media (min-width: 48rem) {
+  .nav li {
+    display: inline-block;
+    position: relative;
+    left: 10rem;
+    bottom: 1.5rem;
+  }
 }
 
 .nav li:hover {
@@ -132,14 +148,46 @@ main {
   padding-left: 1rem;
   color: #323232;
 }
+@media (min-width: 48rem) {
+  .landing__about-text {
+    font-size: 2.25rem;
+    padding-left: 2.25rem;
+  }
+}
 
 .landing__about-quotes {
   font-family: avenir__demi;
   color: #323232;
 }
+@media (min-width: 48rem) and (min-width: 48rem) {
+  .landing__about-quotes {
+    padding: 0 2.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .band__name {
+    padding: 0 2.25rem;
+    padding-top: 3rem;
+    padding-bottom: 2.25rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .band__bio {
+    -moz-column-count: 2;
+         column-count: 2;
+    padding: 0 2.25rem;
+  }
+}
 
 .landing__about-img {
   padding-bottom: 0.5rem;
+}
+@media (min-width: 48rem) {
+  .landing__about-img {
+    padding: 0 2.25rem;
+  }
 }
 
 #landing__image {
@@ -166,6 +214,14 @@ main {
   padding-left: 1rem;
   z-index: 2;
 }
+@media (min-width: 48rem) {
+  .title {
+    position: absolute;
+    top: 14rem;
+    font-size: 3rem;
+    padding-left: 2.25rem;
+  }
+}
 
 .photo__gallery-title {
   padding-top: 1.5rem;
@@ -178,6 +234,24 @@ main {
   background-color: #fafafa;
   padding-top: 1rem;
 }
+@media (min-width: 48rem) {
+  #photo__gallery {
+    display: table;
+  }
+}
+
+.gallery__item {
+  padding: 0 1rem;
+  margin: 1rem 0;
+}
+@media (min-width: 48rem) {
+  .gallery__item {
+    display: grid;
+    float: left;
+    width: 33%;
+    margin: 0;
+  }
+}
 
 .last__img {
   padding-bottom: 0.5rem;
@@ -187,6 +261,17 @@ main {
   background-color: #323232;
   color: #ffffff;
   padding: 1rem 1rem;
+}
+@media (min-width: 48rem) {
+  .footer {
+    padding-bottom: 10rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__sections {
+    display: flex;
+  }
 }
 
 .footer img {
@@ -203,6 +288,13 @@ main {
   margin: 0;
   padding: 0.5rem 0;
 }
+@media (min-width: 48rem) {
+  .footer ul {
+    position: relative;
+    left: 10rem;
+    bottom: 3rem;
+  }
+}
 
 .footer h3 {
   font-size: 1.5rem;
@@ -214,6 +306,11 @@ main {
 .footer p {
   padding: 0;
 }
+@media (min-width: 48rem) {
+  .footer p {
+    padding: 0 1rem;
+  }
+}
 
 .footer__bold {
   font-family: avenir__demi;
@@ -221,6 +318,21 @@ main {
 
 .footer__regular {
   font-family: avenir__regular;
+}
+@media (min-width: 48rem) {
+  .footer__regular {
+    position: relative;
+    bottom: 6.5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .footer__copyright {
+    position: relative;
+    top: 12rem;
+    right: 45rem;
+    white-space: nowrap;
+  }
 }
 
 .instagram {
