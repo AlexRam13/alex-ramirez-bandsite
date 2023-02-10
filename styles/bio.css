@@ -1,11 +1,15 @@
 @font-face {
-  font-family: Avenir;
-  src: url(../Assets/Font/AvenirNextLTPro-Bold.otf), url(../Assets/Font/AvenirNextLTPro-Demi.otf), url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+  font-family: Avenir__bold;
+  src: url(../Assets/Font/AvenirNextLTPro-Bold.otf);
 }
-html {
-  font-family: Avenir;
+@font-face {
+  font-family: Avenir__demi;
+  src: url(../Assets/Font/AvenirNextLTPro-Demi.otf);
 }
-
+@font-face {
+  font-family: Avenir__regular;
+  src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
+}
 HTML,
 body {
   margin: 0px;
@@ -38,27 +42,30 @@ h1 {
 h2 {
   font-size: 1.5rem;
   line-height: 2rem;
-  font-weight: 700;
+  font-family: avenir__demi;
   margin: 0;
 }
 
 h3 {
   font-size: 0.875rem;
   line-height: 1.125rem;
-  font-weight: 600;
+  font-family: avenir__demi;
+  margin: 0;
+  padding: 1rem 1rem;
 }
 
 p {
   font-size: 0.813rem;
   line-height: 1.125rem;
-  font-weight: 400;
+  font-family: avenir__regular;
   margin: 0;
+  padding: 0rem 1rem;
 }
 
 img {
   display: block;
   width: 100%;
-  padding: 1rem 0rem;
+  padding: 0.5rem 1rem;
 }
 
 .nav {
@@ -69,13 +76,43 @@ img {
 .nav h1 {
   text-align: center;
   padding-top: 1rem;
+  font-weight: 600;
+  font-family: avenir__regular;
 }
 
 .nav li {
   display: inline-block;
+  position: relative;
+  left: 1.3rem;
   text-align: center;
+  font-family: avenir__regular;
   padding: 0rem 2.3rem;
   padding-bottom: 1rem;
+}
+
+.nav li:hover {
+  font-family: avenir__demi;
+  display: inline-block;
+  position: relative;
+  border-bottom-color: #ffffff;
+}
+
+.nav li::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.nav li:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 main {
@@ -87,7 +124,18 @@ main {
 }
 
 .landing__about-text {
-  padding-top: 1.5rem;
+  padding-top: 1rem;
+  padding-left: 1rem;
+  color: #323232;
+}
+
+.landing__about-quotes {
+  font-family: avenir__demi;
+  color: #323232;
+}
+
+.landing__about-img {
+  padding-bottom: 0.5rem;
 }
 
 #landing__image {
@@ -109,10 +157,26 @@ main {
 .title {
   position: absolute;
   justify-content: center;
-  top: 2.5rem;
+  top: 4rem;
   color: #fff;
   padding-left: 1rem;
   z-index: 2;
+}
+
+.photo__gallery-title {
+  padding-top: 1.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  color: #323232;
+}
+
+#photo__gallery {
+  background-color: #fafafa;
+  padding-top: 1rem;
+}
+
+.last__img {
+  padding-bottom: 0.5rem;
 }
 
 .footer {
@@ -123,12 +187,49 @@ main {
 
 .footer img {
   display: inline-block;
-  height: 1.7rem;
+  height: 2.4rem;
 }
 
 .footer li {
   display: inline-block;
   padding: 0rem 1rem;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.footer h3 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+
+.footer p {
+  padding: 0;
+}
+
+.footer__bold {
+  font-family: avenir__demi;
+}
+
+.footer__regular {
+  font-family: avenir__regular;
+}
+
+.instagram {
   position: relative;
-  right: 1rem;
+  right: 1.8rem;
+}
+
+.facebook {
+  position: relative;
+  right: 4rem;
+}
+
+.twitter {
+  position: relative;
+  right: 6.5rem;
 }/*# sourceMappingURL=bio.css.map */
