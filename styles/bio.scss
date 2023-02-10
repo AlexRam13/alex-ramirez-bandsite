@@ -1,3 +1,5 @@
+@use "../partials/mixins" as *;
+
 // Setting the page font
 
 // 700
@@ -19,10 +21,6 @@
 }
 
 
-html {
-    // font-family: Avenir;
-
-}
 
 // Reset page spacing
 HTML,
@@ -104,6 +102,10 @@ img {
 
 }
 
+.nav ul {
+    margin-bottom: 0;
+}
+
 .nav li {
     display: inline-block;
     position: relative;
@@ -177,7 +179,7 @@ main {
     background-size: cover;
     background-repeat: no-repeat;
     position: relative;
-    height: 50vw;
+    height: 58vw;
 }
 
 
@@ -185,7 +187,7 @@ main {
 .overlay__color {
     position: relative;
     background-color: #323232;
-    height: 50vw;
+    height: 58vw;
     opacity: 50%;
 
 }
@@ -193,7 +195,7 @@ main {
 .title {
     position: absolute;
     justify-content: center;
-    top: 4rem;
+    top: 4.8rem;
     color: #fff;
     padding-left: 1rem;
     z-index: 2;
