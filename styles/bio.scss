@@ -86,13 +86,34 @@ img {
     display: block;
     width: 100%;
     padding: 0.5rem 1rem;
+
+    @include tablet {
+        margin: 0;
+        padding: 0;
+    }
 }
 
 // Nav
 .nav {
     background-color: #323232;
     color: #ffffff;
+    padding-top: 1rem;
 }
+
+//logo-Nav
+#logo__img-nav img {
+    padding: 0;
+    margin: 0;
+    height: 1.3em;
+
+    @include tablet {
+        display: inline;
+        position: relative;
+        right: 17em;
+        top: 1em;
+    }
+}
+
 
 .nav h1 {
     text-align: center;
@@ -126,7 +147,8 @@ img {
     @include tablet {
         display: inline-block;
         position: relative;
-        left: 10rem;
+        justify-content: space-evenly;
+        left: 11rem;
         bottom: 1.5rem;
     }
 }
@@ -189,12 +211,11 @@ main {
     color: #323232;
 
     @include tablet {
-        @include tablet {
-            padding: 0 2.25rem;
+        padding: 0 2.25rem;
 
-        }
     }
 }
+
 
 // The Bees Knees Name
 .band__name {
@@ -276,8 +297,8 @@ main {
     padding-top: 1rem;
 
     @include tablet {
-        display: table;
-
+        grid-template-columns: repeat(3, 1fr);
+        display: grid;
 
     }
 }
@@ -287,10 +308,8 @@ main {
     margin: 1rem 0;
 
     @include tablet {
-        display: grid;
-        float: left;
-        width: 33%;
-        margin: 0;
+        // display: grid;
+        padding: -2rem;
     }
 }
 
@@ -327,6 +346,7 @@ main {
 .footer img {
     display: inline-block;
     height: 2.4rem;
+
 
 }
 
@@ -369,36 +389,55 @@ main {
     font-family: avenir__demi;
 }
 
-.footer__regular {
-    font-family: avenir__regular;
+#footer__logo {
+    display: flex;
+    position: relative;
+    bottom: 1em;
+    right: 4.8em;
+    padding-top: 2rem;
 
     @include tablet {
         position: relative;
-        bottom: 6.5rem;
+        bottom: 11rem;
+
     }
 }
 
-.footer__copyright {
+#footer__logo img {
     @include tablet {
+        padding: 0;
+        margin: 0;
+        height: auto;
+        width: 9em;
+    }
+}
+
+
+.copyright p {
+    @include tablet {
+        padding: 0;
+        margin: 0;
         position: relative;
+        right: 44rem;
         top: 12rem;
-        right: 45rem;
-        white-space: nowrap;
+
 
     }
 }
 
 .instagram {
     position: relative;
-    right: 1.8rem;
+    right: 1rem;
+
 }
 
 .facebook {
     position: relative;
-    right: 4rem;
+    right: 2rem;
 }
 
 .twitter {
     position: relative;
-    right: 6.5rem;
+    right: 3rem;
+
 }
