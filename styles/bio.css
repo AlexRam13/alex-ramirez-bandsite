@@ -86,18 +86,21 @@ img {
   padding: 0;
   margin: 0;
   height: 1.3em;
+  max-width: 20rem;
 }
 @media (min-width: 48rem) {
   #logo__img-nav img {
     position: relative;
     right: 18rem;
     top: 1rem;
+    max-width: 48rem;
   }
 }
 @media (min-width: 80rem) {
   #logo__img-nav img {
     position: relative;
     right: 35em;
+    max-width: 80rem;
   }
 }
 
@@ -377,18 +380,21 @@ main {
   display: flex;
   bottom: 1em;
   padding-top: 2rem;
+  max-width: 20rem;
 }
 @media (min-width: 48rem) {
   #footer__logo {
     position: relative;
     bottom: 2.5em;
     left: 3rem;
+    max-width: 48rem;
   }
 }
 @media (min-width: 48rem) and (min-width: 80rem) {
   #footer__logo {
     position: relative;
     left: 17rem;
+    max-width: 80rem;
   }
 }
 
@@ -419,6 +425,7 @@ main {
   .footer__email {
     position: relative;
     top: 3.2rem;
+    justify-content: baseline;
   }
 }
 
@@ -433,6 +440,11 @@ main {
   .footer__address-503 {
     position: relative;
     top: 0.8rem;
+  }
+}
+@media (min-width: 48rem) {
+  .footer__address-503 {
+    position: relative;
   }
 }
 

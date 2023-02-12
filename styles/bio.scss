@@ -44,6 +44,7 @@ li,
 a {
     list-style: none;
     padding: 0;
+
 }
 
 // Page Header
@@ -108,19 +109,20 @@ img {
     padding: 0;
     margin: 0;
     height: 1.3em;
+    max-width: 20rem;
 
     @include tablet {
         position: relative;
         right: 18rem;
         top: 1rem;
-
+        max-width: 48rem;
 
     }
 
     @include desktop {
         position: relative;
         right: 35em;
-
+        max-width: 80rem;
 
     }
 }
@@ -437,15 +439,18 @@ main {
     display: flex;
     bottom: 1em;
     padding-top: 2rem;
+    max-width: 20rem;
 
     @include tablet {
         position: relative;
         bottom: 2.5em;
         left: 3rem;
+        max-width: 48rem;
 
         @include desktop {
             position: relative;
             left: 17rem;
+            max-width: 80rem;
         }
 
     }
@@ -478,13 +483,19 @@ main {
     @include tablet {
         position: relative;
         top: 3.2rem;
+        justify-content: baseline;
+
+
     }
 }
+
+
 
 .footer__email-info {
     @include desktop {
         position: relative;
         top: 3.2rem;
+
     }
 }
 
@@ -492,6 +503,10 @@ main {
     @include desktop {
         position: relative;
         top: 0.8rem;
+    }
+
+    @include tablet {
+        position: relative;
     }
 }
 
@@ -510,6 +525,8 @@ main {
 
     }
 }
+
+
 
 .instagram {
     position: relative;
