@@ -95,6 +95,7 @@ img {
 
 // Nav
 .nav {
+    display: flexbox;
     background-color: #323232;
     color: #ffffff;
     padding-top: 1rem;
@@ -102,15 +103,25 @@ img {
 
 //logo-Nav
 #logo__img-nav img {
+    position: relative;
+    // left: 15rem;
     padding: 0;
     margin: 0;
     height: 1.3em;
 
     @include tablet {
-        display: inline;
         position: relative;
-        right: 17em;
-        top: 1em;
+        right: 18rem;
+        top: 1rem;
+
+
+    }
+
+    @include desktop {
+        position: relative;
+        right: 35em;
+
+
     }
 }
 
@@ -204,6 +215,13 @@ main {
 
     }
 
+    @include desktop {
+        position: relative;
+        left: 3rem;
+        padding: 1.5rem 0;
+
+
+    }
 }
 
 .landing__about-quotes {
@@ -212,6 +230,11 @@ main {
 
     @include tablet {
         padding: 0 2.25rem;
+
+    }
+
+    @include desktop {
+        flex-wrap: wrap;
 
     }
 }
@@ -242,6 +265,12 @@ main {
 
     @include tablet {
         padding: 0 2.25rem;
+    }
+
+    @include desktop {
+        align-items: center;
+        padding-bottom: 1.5rem;
+        width: 90%;
 
     }
 }
@@ -254,6 +283,12 @@ main {
     background-repeat: no-repeat;
     position: relative;
     height: 58vw;
+}
+
+.landing__about p {
+    @include desktop {
+        font-size: 1rem;
+    }
 }
 
 
@@ -303,6 +338,8 @@ main {
     }
 }
 
+
+
 .gallery__item {
     padding: 0 1rem;
     margin: 1rem 0;
@@ -312,6 +349,13 @@ main {
         padding: -2rem;
     }
 }
+
+.gallery__item:hover {
+    transform: translateY(-0.5%);
+    box-shadow: 0 4rem 8rem rgb(0, 0, 0, 0.5);
+}
+
+
 
 
 //Last img in the gallary
@@ -391,36 +435,78 @@ main {
 
 #footer__logo {
     display: flex;
-    position: relative;
     bottom: 1em;
-    right: 4.8em;
     padding-top: 2rem;
 
     @include tablet {
         position: relative;
-        bottom: 11rem;
+        bottom: 2.5em;
+        left: 3rem;
+
+        @include desktop {
+            position: relative;
+            left: 17rem;
+        }
 
     }
 }
 
 #footer__logo img {
+    position: relative;
+    bottom: 5em;
+    right: 4.8em;
+
+}
+
+//Copyright Text
+.footer__copyright {
+    position: relative;
+    top: 5rem;
+
     @include tablet {
-        padding: 0;
-        margin: 0;
-        height: auto;
-        width: 9em;
+        position: relative;
+        right: 24rem;
+    }
+
+    @include desktop {
+        position: relative;
+        right: 26rem;
+    }
+}
+
+.footer__email {
+    @include tablet {
+        position: relative;
+        top: 3.2rem;
+    }
+}
+
+.footer__email-info {
+    @include desktop {
+        position: relative;
+        top: 3.2rem;
+    }
+}
+
+.footer__address-503 {
+    @include desktop {
+        position: relative;
+        top: 0.8rem;
     }
 }
 
 
-.copyright p {
+.footer__booking-agent {
     @include tablet {
-        padding: 0;
-        margin: 0;
         position: relative;
-        right: 44rem;
-        top: 12rem;
+        top: 1rem;
+    }
+}
 
+.instagram__link img {
+    @include tablet {
+        height: 2rem;
+        justify-content: space-between;
 
     }
 }
