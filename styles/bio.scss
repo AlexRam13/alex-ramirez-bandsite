@@ -587,12 +587,12 @@ main {
 
 button:hover {
     color: #fff;
-    background-color: #323232;
+    background-color: lightslategrey;
 }
 
 @media(max-width: 900px) {
     .comment__box {
-        width: 80%;
+        width: 90%;
         margin: 5%;
     }
 }
