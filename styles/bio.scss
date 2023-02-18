@@ -1,25 +1,6 @@
 @use "../partials/mixins" as *;
-
+@use "../partials/typography" as *;
 // Setting the page font
-
-// 700
-@font-face {
-    font-family: Avenir__bold;
-    src: url(../Assets/Font/AvenirNextLTPro-Bold.otf);
-}
-
-//600
-@font-face {
-    font-family: Avenir__demi;
-    src: url(../Assets/Font/AvenirNextLTPro-Demi.otf);
-}
-
-//400
-@font-face {
-    font-family: Avenir__regular;
-    src: url(../Assets/Font/AvenirNextLTPro-Regular.otf);
-}
-
 
 
 // Reset page spacing
@@ -29,6 +10,7 @@ body {
     padding: 0px;
     border: 0px;
     height: auto;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
 }
 
 // Reset Rule
@@ -44,6 +26,7 @@ li,
 a {
     list-style: none;
     padding: 0;
+    text-decoration: none;
 
 }
 
@@ -52,6 +35,7 @@ h1 {
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
+    font-family: Avenir;
     text-transform: uppercase;
     margin: 0;
 }
@@ -60,7 +44,7 @@ h1 {
 h2 {
     font-size: 1.5rem;
     line-height: 2rem;
-    font-family: avenir__demi;
+    font-family: Avenir;
     margin: 0;
 }
 
@@ -68,7 +52,7 @@ h2 {
 h3 {
     font-size: 0.875rem;
     line-height: 1.125rem;
-    font-family: avenir__demi;
+    font-family: Avenir;
     margin: 0;
     padding: 1rem 1rem;
 }
@@ -77,7 +61,7 @@ h3 {
 p {
     font-size: 0.813rem;
     line-height: 1.125rem;
-    font-family: avenir__regular;
+    font-family: Avenir;
     margin: 0;
     padding: 0rem 1rem;
 }
@@ -86,7 +70,7 @@ p {
 img {
     display: block;
     width: 100%;
-    padding: 0.5rem 1rem;
+    // padding: 0.5rem 1rem;
 
     @include tablet {
         margin: 0;
@@ -95,187 +79,121 @@ img {
 }
 
 // Nav
-.nav {
-    display: flexbox;
+.main-nav {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
     background-color: #323232;
-    color: #ffffff;
-    padding-top: 1rem;
-}
+    border-bottom: 1px solid #F2F2F2;
+    padding: 1rem 0;
+    font-family: Avenir;
 
-//logo-Nav
-#logo__img-nav img {
-    position: relative;
-    // left: 15rem;
-    padding: 0;
-    margin: 0;
-    height: 1.3em;
-    max-width: 20rem;
+    &__logo {
+        margin-left: 5%;
+        padding-top: 1em;
+    }
 
-    @include tablet {
-        position: relative;
-        right: 18rem;
-        top: 1rem;
-        max-width: 48rem;
+    &__img {
+        display: block;
+        height: 2em;
 
     }
 
-    @include desktop {
-        position: relative;
-        right: 35em;
-        max-width: 80rem;
-
+    &__section {
+        margin: 1.5em 0 0 5%;
     }
-}
 
-
-.nav h1 {
-    text-align: center;
-    padding-top: 1rem;
-    font-weight: 600;
-    font-family: avenir__regular;
-
-    @include tablet {
-        text-align: start;
-        position: relative;
-        top: 1.2rem;
-        padding-left: 2.25rem;
-    }
-}
-
-
-
-.nav ul {
-    margin-bottom: 0;
-}
-
-.nav li {
-    display: inline-block;
-    position: relative;
-    left: 1.3rem;
-    text-align: center;
-    font-family: avenir__regular;
-    padding: 0rem 2.3rem;
-    padding-bottom: 1rem;
-
-    @include tablet {
+    &__item {
         display: inline-block;
-        position: relative;
-        justify-content: space-evenly;
-        left: 11rem;
-        bottom: 1.5rem;
-    }
-}
-
-.nav li:hover {
-    font-family: avenir__demi;
-    display: inline-block;
-    position: relative;
-    border-bottom-color: #ffffff;
-}
-
-.nav li::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    transform: scaleX(0);
-    height: 4px;
-    bottom: 0;
-    left: 0;
-    background-color: #ffffff;
-    transform-origin: bottom right;
-    transition: transform 0.25s ease-out;
-
-}
-
-.nav li:hover:after {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-
-
-
-//Main
-main {
-    margin: auto;
-}
-
-.landing {
-    background-color: #fff;
-}
-
-
-
-.landing__about-text {
-    padding-top: 1rem;
-    padding-left: 1rem;
-    color: #323232;
-
-    @include tablet {
-        font-size: 2.25rem;
-        padding-left: 2.25rem;
-
+        padding: 0 1.4em 0 0;
+        font-size: 1.5rem;
     }
 
-    @include desktop {
-        position: relative;
-        left: 3rem;
-        padding: 1.5rem 0;
-
-
-    }
-}
-
-.landing__about-quotes {
-    font-family: avenir__demi;
-    color: #323232;
-
-    @include tablet {
-        padding: 0 2.25rem;
-
+    &__link {
+        color: #afafaf;
+        display: flex;
     }
 
-    @include desktop {
-        flex-wrap: wrap;
+    &__link {
+        &:hover {
+            color: #fff;
+            border-bottom: 3px solid #fff;
+            font-weight: 300;
 
+        }
     }
 }
 
 
-// The Bees Knees Name
-.band__name {
+@media screen and (min-width : 48rem) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between;
 
-    @include tablet {
-        padding: 0 2.25rem;
-        padding-top: 3rem;
-        padding-bottom: 2.25rem;
+
+
+        &__logo {
+            margin-left: 2.3em;
+        }
+
+        &__list {
+            align-self: center;
+            margin: 0 0.8em 0 0;
+
+        }
+
+        &__section {
+            position: absolute;
+            left: 25%;
+            top: 0px;
+        }
+
+        &__img {
+            height: 2em;
+        }
     }
 }
 
-// The Bees Knees Bio
-.band__bio {
+//Desktop
 
-    @include tablet {
-        column-count: 2;
-        padding: 0 2.25rem;
+@media screen and (min-width : 80rem) {
+    .main-nav {
+        flex-direction: row;
+        justify-content: space-between;
 
+
+
+        &__logo {
+            margin-left: 5em;
+        }
+
+        &__list {
+            align-self: center;
+            margin: 0 0.8em 0 0;
+
+        }
+
+        &__section {
+            position: absolute;
+            left: 25%;
+            top: 0px;
+        }
+
+        &__img {
+            height: 2em;
+        }
     }
 }
 
-.landing__about-img {
-    padding-bottom: 0.5rem;
 
-    @include tablet {
-        padding: 0 2.25rem;
-    }
 
-    @include desktop {
-        align-items: center;
-        padding-bottom: 1.5rem;
-        width: 90%;
 
-    }
-}
+//End Nav
+
+
+
+
+// Landing Area
 
 // Main Flower Img
 #landing__image {
@@ -287,15 +205,8 @@ main {
     height: 58vw;
 }
 
-.landing__about p {
-    @include desktop {
-        font-size: 1rem;
-    }
-}
-
-
-
-.overlay__color {
+//overlay color
+.landing__overlay {
     position: relative;
     background-color: #323232;
     height: 58vw;
@@ -303,7 +214,8 @@ main {
 
 }
 
-.title {
+//Bees knees title
+.landing__title {
     position: absolute;
     justify-content: center;
     top: 4.8rem;
@@ -319,228 +231,373 @@ main {
     }
 }
 
-// Main Photo Gallery
+// End landing Area
 
-.photo__gallery-title {
-    padding-top: 1.5rem;
-    padding-left: 1rem;
-    padding-bottom: 0.5rem;
-    color: #323232;
+// Main Section
 
-}
-
-#photo__gallery {
-    background-color: #fafafa;
-    padding-top: 1rem;
-
-    @include tablet {
-        grid-template-columns: repeat(3, 1fr);
-        display: grid;
-
-    }
-}
+.main {
 
 
-
-.gallery__item {
-    padding: 0 1rem;
-    margin: 1rem 0;
-
-    @include tablet {
-        // display: grid;
-        padding: -2rem;
-    }
-}
-
-.gallery__item:hover {
-    transform: translateY(-0.5%);
-    box-shadow: 0 4rem 8rem rgb(0, 0, 0, 0.5);
-}
-
-
-
-
-//Last img in the gallary
-.last__img {
-    padding-bottom: 0.5rem;
-}
-
-
-
-// Footer
-.footer {
-    background-color: #323232;
-    color: #ffffff;
-    padding: 1rem 1rem;
-
-    @include tablet {
-        padding-bottom: 10rem;
-
+    &__heading {
+        padding-top: 1rem;
+        padding-left: 1rem;
+        color: #323232;
 
     }
 
-
-}
-
-.footer__sections {
-    @include tablet {
-        display: flex;
+    //Main Section Img
+    &__figure {
+        padding-bottom: 0.5rem;
 
     }
-}
 
-.footer img {
-    display: inline-block;
-    height: 2.4rem;
-
-
-}
-
-.footer li {
-    display: inline-block;
-    padding: 0rem 1rem;
-
-}
-
-.footer ul {
-    margin: 0;
-    padding: 0.5rem 0;
-
-    @include tablet {
-        position: relative;
-        left: 10rem;
-        bottom: 3rem;
+    &__img {
+        padding: 0 1em;
     }
 
-}
-
-.footer h3 {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    margin: 0;
-    padding: 0.5rem 0;
-
-}
-
-.footer p {
-    padding: 0;
-
-    @include tablet {
-        padding: 0 1rem;
+    //Main Quotes
+    &__quotes {
+        font-family: Avenir;
+        color: black;
+        font-weight: 700;
     }
 
-}
 
-.footer__bold {
-    font-family: avenir__demi;
-}
+    //Tablet 
+    @media(min-width: 48rem) {
 
-#footer__logo {
-    display: flex;
-    bottom: 1em;
-    padding-top: 2rem;
-    max-width: 20rem;
-
-    @include tablet {
-        position: relative;
-        bottom: 2.5em;
-        left: 3rem;
-        max-width: 48rem;
-
-        @include desktop {
-            position: relative;
-            left: 17rem;
-            max-width: 80rem;
+        &__heading {
+            padding: 2rem 2rem;
         }
 
+        &__img {
+            width: 100%;
+            padding: 0 5rem;
+            padding-bottom: 2em;
+        }
+
+        &__bio {
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__quotes {
+            text-align: left;
+            font-size: large;
+            padding-left: 4rem;
+            padding-right: 4rem;
+
+        }
+
+        &__teddy {
+            text-align: left;
+            font-size: large;
+            padding-left: 4rem;
+
+        }
+
+        &__title {
+            padding-left: 5rem;
+            font-size: large;
+        }
+
+        &__copy {
+            column-count: 2;
+            padding: 0 5rem;
+        }
+    }
+
+    //Desktop 
+    @media(min-width: 80rem) {
+
+        &__heading {
+            padding: 2rem 2rem;
+        }
+
+        &__img {
+            width: 100%;
+            padding: 0 7rem;
+            padding-bottom: 2em;
+        }
+
+        &__bio {
+            align-items: center;
+        }
+
+        &__quotes {
+            flex-direction: column;
+            text-align: left;
+            font-size: large;
+            padding-left: 6rem;
+            padding-right: 4rem;
+            column-count: 2;
+            line-height: 2rem;
+        }
+
+        &__teddy {
+            flex-direction: column;
+            text-align: left;
+            font-size: large;
+            padding-left: 6rem;
+            padding-top: 1rem;
+        }
+
+        &__title {
+            padding-left: 6rem;
+            padding-top: 2rem;
+            font-size: large;
+        }
+
+        &__copy {
+            column-count: 2;
+            padding: 0 6rem;
+        }
+    }
+
+}
+
+
+
+
+
+
+// Main Photo Gallery
+
+.gallery {
+    &__title {
+        padding-top: 1.5rem;
+        padding-left: 1rem;
+        padding-bottom: 0.5rem;
+        color: black;
+        font-family: Avenir;
+        font-weight: 700;
+        background-color: #fafafa;
+    }
+
+    &__cards {
+        background-color: #fafafa;
+        padding-top: 1rem;
+
+        @include tablet {
+            grid-template-columns: repeat(3, 1fr);
+            display: grid;
+        }
+    }
+
+    &__item {
+        padding: 0 1rem;
+        margin: 1rem 0;
+
+        @include tablet {
+            // display: grid;
+            padding: -2rem;
+        }
+    }
+
+    &__item:hover {
+        transform: translateY(-0.5%);
+        box-shadow: 0 4rem 8rem rgb(0, 0, 0, 0.5);
+
+    }
+
+    &__last-img {
+        padding-bottom: 0.5rem;
+    }
+
+    //Tablet 
+    @media(min-width: 48rem) {
+        &__title {
+            padding-left: 2rem;
+        }
+
+        &__cards {
+            padding: 0 1rem;
+        }
+    }
+
+    //Tablet 
+    @media(min-width: 80rem) {
+        &__title {
+            padding: 0 5rem;
+            padding-top: 1rem;
+        }
+
+        &__cards {
+            padding: 0 4rem;
+        }
+
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+//footer
+
+.footer {
+    background-color: #323232;
+    color: #fff;
+
+    &__title {
+        flex-direction: column;
+        padding-top: 1rem;
+    }
+
+    &__heading {
+        font-weight: 700;
+        font-size: 2rem;
+
+    }
+
+
+    &__link {
+        display: inline-block;
+        padding-left: 1rem;
+    }
+
+    &__logo {
+        width: 12rem;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        padding-left: 1rem;
+    }
+
+    &__copyright {
+        padding-bottom: 1rem;
+    }
+
+    &__name {
+        padding: 1rem 0rem;
+    }
+
+    &__email {
+        padding: 1rem 0rem;
+    }
+
+}
+
+//responsive 
+
+//Tablet
+
+@media(min-width: 48rem) {
+    .footer {
+        background-color: #323232;
+
+        &__title {
+            flex-direction: row;
+            display: flex;
+            padding-top: 1rem;
+
+
+        }
+
+        &__link {
+            padding: 0 0.5rem;
+
+        }
+
+        &__heading {
+            width: 30%;
+        }
+
+        &__socials {
+            position: absolute;
+            left: 15rem;
+        }
+
+
+        &__name {
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__main {
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        &__logo {
+            position: absolute;
+            left: 74%;
+        }
+
+        &__imgs {
+            position: relative;
+            bottom: 4em;
+        }
     }
 }
 
-#footer__logo img {
-    position: relative;
-    bottom: 5em;
-    right: 4.8em;
+//Desktop
 
-}
+@media(min-width: 80rem) {
+    .footer {
+        background-color: #323232;
 
-//Copyright Text
-.footer__copyright {
-    position: relative;
-    top: 5rem;
-
-    @include tablet {
-        position: relative;
-        right: 24rem;
-    }
-
-    @include desktop {
-        position: relative;
-        right: 26rem;
-    }
-}
-
-.footer__email {
-    @include tablet {
-        position: relative;
-        top: 3.2rem;
-        justify-content: baseline;
+        &__title {
+            flex-direction: row;
+            display: flex;
+            padding-top: 2rem;
+            padding-left: 2rem;
 
 
-    }
-}
+        }
+
+        &__link {
+            padding: 0 0.5rem;
+
+        }
+
+        &__heading {
+            width: 30%;
+        }
+
+        &__socials {
+            position: absolute;
+            left: 17rem;
+        }
 
 
+        &__name {
+            display: flex;
+            flex-direction: column;
+        }
 
-.footer__email-info {
-    @include desktop {
-        position: relative;
-        top: 3.2rem;
+        &__main {
+            display: flex;
+            flex-direction: row;
+            padding-left: 2rem;
+        }
 
-    }
-}
+        &__copyright {
+            padding-left: 2rem;
+            padding-top: 1rem;
+            padding-bottom: 2rem;
 
-.footer__address-503 {
-    @include desktop {
-        position: relative;
-        top: 0.8rem;
-    }
+        }
 
-    @include tablet {
-        position: relative;
-    }
-}
+        &__logo {
+            position: absolute;
+            left: 74%;
+        }
 
-
-.footer__booking-agent {
-    @include tablet {
-        position: relative;
-        top: 1rem;
-    }
-}
-
-.instagram__link img {
-    @include tablet {
-        height: 2rem;
-        justify-content: space-between;
-
+        &__imgs {
+            position: relative;
+            bottom: 4em;
+        }
     }
 }
 
 
 
-.instagram {
-    position: relative;
-    right: 1rem;
-
-}
-
-.facebook {
-    position: relative;
-    right: 2rem;
-}
-
-.twitter {
-    position: relative;
-    right: 3rem;
-
-}
+//End Footer
