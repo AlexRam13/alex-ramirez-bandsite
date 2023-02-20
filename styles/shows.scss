@@ -1,0 +1,74 @@
+@use "./partials/mixins" as *;
+@use "./partials/typography" as *;
+@use"./partials/breakpoints" as *;
+@use"./partials/global" as *;
+
+
+// Landing Section
+.landing {
+
+
+    &__image {
+        background: url("../Assets/Images/hero-shows.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        position: relative;
+        height: 85vw;
+    }
+
+    &__overlay-color {
+        position: relative;
+        background-color: #323232;
+        height: 85vw;
+        opacity: 50%;
+    }
+
+    &__info {
+        display: flex;
+        position: absolute;
+        top: 5rem;
+        flex-direction: column;
+        color: #fff;
+        align-items: center;
+    }
+
+    &__heading {
+        font-size: 1rem;
+        padding-right: 6rem;
+    }
+
+    &__text {
+        padding-top: 2rem;
+        padding-right: 6rem;
+        padding-bottom: 2rem;
+
+
+    }
+
+    &__paragraph {
+        font-size: 1.5rem;
+        line-height: 2rem;
+
+    }
+}
+
+//End Landing Section
+
+
+
+
+
+
+
+
+// Footer
+.footer {
+    &__copyright {
+
+        padding-bottom: 4rem;
+        margin: 0;
+    }
+}
+
+// End Footer

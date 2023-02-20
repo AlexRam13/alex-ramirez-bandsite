@@ -1,0 +1,71 @@
+@use"../partials/breakpoints" as *;
+// Reset page spacing
+
+HTML,
+body {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: auto;
+    font-family: Avenir, Arial, Helvetica, sans-serif;
+}
+
+// Reset Rule
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+//lists
+ul,
+li,
+a {
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+
+}
+
+// Page Header
+h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: Avenir;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+// Section Header
+h2 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-family: Avenir;
+    margin: 0;
+}
+
+// Subheader
+h3 {
+    font-size: 0.875rem;
+    line-height: 1.125rem;
+    font-family: Avenir;
+    margin: 0;
+    padding: 1rem 1rem;
+}
+
+//Body Copy
+p {
+    font-size: 0.813rem;
+    line-height: 1.125rem;
+    font-family: Avenir;
+    margin: 0;
+    padding: 0rem 1rem;
+}
+
+//Images
+img {
+    display: block;
+    width: 100%;
+    // padding: 0.5rem 1rem;
+}
