@@ -415,7 +415,7 @@ img {
         }
     }
 
-    //Tablet 
+    //Desktop 
     @media(min-width: 80rem) {
         &__title {
             padding: 0 5rem;
@@ -435,20 +435,30 @@ img {
 // Comments Section
 .comment {
     font-family: Avenir;
-    width: 50%;
+    width: 100%;
     border: 1px solid #ccc;
-    margin: 50px 0;
-    padding: 10px 20px;
-    border-radius: 5px;
-    margin-left: 25%;
-    margin-top: 80px;
-    box-shadow: 0px 0px 10px 1px rgb(165, 165, 165);
+
 
     &__title {
         text-align: left;
         font-size: 28px;
         color: #323232;
 
+    }
+
+    &__img {
+        width: 7em;
+        height: 7em;
+        border-radius: 50%;
+        position: absolute;
+        margin-left: 1.3rem;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        padding-left: 9rem;
     }
 
     & input,
@@ -464,7 +474,7 @@ img {
     }
 
     button {
-
+        width: 100%;
         margin: 10px 0;
         border: none;
         background-color: #323232;
@@ -486,12 +496,36 @@ img {
 
     // Desktop
     @media(min-width: 80rem) {
-        padding: auto;
+        padding: 0 8rem;
     }
 
 }
 
+//History Section
 
+.history {
+
+    &__block {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ccc;
+    }
+
+    &__profile {
+        width: 20px;
+        height: 20px;
+        background-color: #afafaf;
+        border-radius: 50%;
+        // margin-left: 2rem;
+    }
+
+
+}
+
+
+
+
+//History Section End
 
 
 // End Comments Section
