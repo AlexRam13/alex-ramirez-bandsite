@@ -93,16 +93,26 @@ img {
 .landing__heading {
   font-size: 1rem;
   padding-right: 6rem;
+  position: relative;
+  bottom: 3rem;
 }
 .landing__text {
   padding-top: 2rem;
   padding-right: 6rem;
   padding-bottom: 2rem;
+  position: relative;
+  bottom: 5rem;
 }
 .landing__paragraph {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 700;
+}
+.landing__soundcloud {
+  position: absolute;
+  top: 5rem;
+  height: 166px;
+  size: 10rem;
 }
 
 @media (min-width: 48rem) {
@@ -127,7 +137,8 @@ img {
     padding-top: 2rem;
     padding-right: 6rem;
     padding-bottom: 2rem;
-    bottom: 20rem;
+    position: relative;
+    bottom: 1rem;
   }
   .landing__paragraph {
     font-size: 5rem;
@@ -141,8 +152,9 @@ img {
     flex-direction: column;
   }
   .landing__soundcloud {
-    position: absolute;
-    left: 50rem;
+    position: relative;
+    top: 7rem;
+    left: 40rem;
     width: 50%;
   }
   .landing__heading {

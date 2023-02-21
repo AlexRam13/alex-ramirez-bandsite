@@ -36,15 +36,16 @@
     &__heading {
         font-size: 1rem;
         padding-right: 6rem;
-
+        position: relative;
+        bottom: 3rem;
     }
 
     &__text {
         padding-top: 2rem;
         padding-right: 6rem;
         padding-bottom: 2rem;
-
-
+        position: relative;
+        bottom: 5rem;
     }
 
     &__paragraph {
@@ -53,6 +54,12 @@
         font-weight: 700;
     }
 
+    &__soundcloud {
+        position: absolute;
+        top: 5rem;
+        height: 166px;
+        size: 10rem;
+    }
 
 }
 
@@ -84,9 +91,8 @@
             padding-top: 2rem;
             padding-right: 6rem;
             padding-bottom: 2rem;
-
-            bottom: 20rem;
-
+            position: relative;
+            bottom: 1rem
         }
 
         &__paragraph {
@@ -110,9 +116,10 @@
             }
 
             &__soundcloud {
-                position: absolute;
-                // top: 20rem;
-                left: 50rem;
+                position: relative;
+                top: 7rem;
+                left: 40rem;
+
                 width: 50%;
             }
 
