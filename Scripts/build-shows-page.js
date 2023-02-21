@@ -207,15 +207,20 @@ bookHeading.textContent = "";
 bookSection.appendChild(bookHeading);
 
 // Create an unordered list
-const bookList = document.createElement("ul");
+// const bookList = document.createElement("ul");
+const bookList = document.createElement("div");
+bookList.classList.add("show-container");
+
+
 
 // Create an array of books
 const books = ["DATE", "Wed Dec 15 2021", "VENUE", "Press Club ", "LOCATION", "San Francisco, CA"];
 
+
 // Loop through the books array to create list items
 for (let i = 0; i < books.length; i++) {
-    // Create a new list item
-    const bookItem = document.createElement("li");
+
+
     bookItem.textContent = books[i];
     bookList.appendChild(bookItem);
 }
@@ -227,8 +232,63 @@ bookSection.appendChild(bookList);
 const bookButton = document.createElement("button");
 bookButton.textContent = "BUY TICKETS";
 
+
+
+
+
 // Add the button to the section
 bookSection.appendChild(bookButton);
 
 // Add the book section to the container
 container.appendChild(bookSection);
+
+
+
+//test
+
+// Create a new list item
+    // if (i % 2 === 0) {
+    //     const wrapper = document.createElement("div");
+    //     wrapper.classList.add("data-item");
+    //     const bookItem1 = document.createElement("p");
+    //     const bookItem2 = document.createElement("p");
+    //     bookItem1.textContent = books[i];
+    //     bookItem2.textContent = books[i + 1];
+    //     wrapper.appendChild(bookItem1);
+    //     wrapper.appendChild(bookItem2);
+    // }
+    // for every two items, create a new div
+    // append the two items into the div
+
+
+    ///
+
+// .show - container {
+//     display: flex;
+//     flex - direction: column;
+
+// }
+
+// @media screen and(min - width: 460px) {
+//     .show - container {
+//         flex - direction: column;
+//     }
+
+//     @media screen and(min - width: 768px) {
+//     .show - container {
+//             flex - direction: row;
+//         }
+
+//         <div class="show-container">
+//             <div class="data-item">
+//                 <p class="data-title">Date</p>
+//                 <p>Tue Sept 21 2021</p>
+//             </div>
+//             <div>
+//                 <p>Date</p>
+//                 <p>Tue Sept 21 2021</p>
+//             </div>
+//             <div>
+//                 <button>BUY TICKETS</button></button>
+//         </div>
+// </div >

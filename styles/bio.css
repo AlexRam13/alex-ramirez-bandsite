@@ -339,8 +339,8 @@ img {
   color: #323232;
 }
 .comment__img {
-  width: 7em;
-  height: 7em;
+  width: 5em;
+  height: 5em;
   border-radius: 50%;
   position: absolute;
   margin-left: 1.3rem;
@@ -350,6 +350,7 @@ img {
   flex-direction: column;
   padding: 0 2rem;
   padding-left: 9rem;
+  width: 100%;
 }
 .comment input,
 .comment textarea {
@@ -380,6 +381,9 @@ img {
   .comment {
     padding: auto;
   }
+  .comment__form {
+    display: flex;
+  }
 }
 @media (min-width: 80rem) {
   .comment {
@@ -387,16 +391,37 @@ img {
   }
 }
 
+.history {
+  padding-bottom: 2rem;
+}
 .history__block {
   display: flex;
   flex-direction: column;
   border: 1px solid #ccc;
+  padding: 1rem 0;
 }
 .history__profile {
   width: 20px;
   height: 20px;
   background-color: #afafaf;
   border-radius: 50%;
+}
+.history__date {
+  position: absolute;
+  left: 70%;
+}
+@media (min-width: 48rem) {
+  .history {
+    padding: auto;
+    margin: 0 3rem;
+    margin-left: 10rem;
+  }
+}
+@media (min-width: 80rem) {
+  .history {
+    padding: 0 10rem;
+    padding-left: 8rem;
+  }
 }
 
 .footer {

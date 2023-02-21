@@ -102,32 +102,64 @@ img {
 .landing__paragraph {
   font-size: 1.5rem;
   line-height: 2rem;
+  font-weight: 700;
 }
 
-@media (min-width: 80rem) {
+@media (min-width: 48rem) {
   .landing__info {
     display: flex;
-    position: absolute;
     flex-direction: column;
-    color: #fff;
-    align-items: center;
   }
   .landing__soundcloud {
-    width: 25em;
     position: absolute;
-    left: 33rem;
-    top: 30rem;
+    top: 25rem;
+    left: 2rem;
+    width: 50%;
   }
   .landing__heading {
-    font-size: 1rem;
-    padding-right: 6rem;
-    bottom: 20rem;
+    font-size: 2rem;
+    position: relative;
+    right: 7rem;
+    top: 5rem;
+    padding-bottom: 5rem;
   }
   .landing__text {
     padding-top: 2rem;
     padding-right: 6rem;
     padding-bottom: 2rem;
     bottom: 20rem;
+  }
+  .landing__paragraph {
+    font-size: 5rem;
+    line-height: 5rem;
+    left: 20rem;
+  }
+}
+@media (min-width: 48rem) and (min-width: 80rem) {
+  .landing__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .landing__soundcloud {
+    position: absolute;
+    left: 50rem;
+    width: 50%;
+  }
+  .landing__heading {
+    font-size: 2rem;
+    position: relative;
+    top: 22rem;
+    padding-bottom: 5rem;
+    right: 6rem;
+  }
+  .landing__paragraph {
+    font-size: 5rem;
+    line-height: 5rem;
+    padding-left: 3rem;
+  }
+  .landing__text {
+    position: relative;
+    top: 18rem;
   }
 }
 .section {

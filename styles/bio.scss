@@ -447,8 +447,8 @@ img {
     }
 
     &__img {
-        width: 7em;
-        height: 7em;
+        width: 5em;
+        height: 5em;
         border-radius: 50%;
         position: absolute;
         margin-left: 1.3rem;
@@ -459,6 +459,7 @@ img {
         flex-direction: column;
         padding: 0 2rem;
         padding-left: 9rem;
+        width: 100%;
     }
 
     & input,
@@ -492,6 +493,10 @@ img {
     // Tablet
     @media(min-width: 48rem) {
         padding: auto;
+
+        &__form {
+            display: flex;
+        }
     }
 
     // Desktop
@@ -504,11 +509,13 @@ img {
 //History Section
 
 .history {
+    padding-bottom: 2rem;
 
     &__block {
         display: flex;
         flex-direction: column;
         border: 1px solid #ccc;
+        padding: 1rem 0;
     }
 
     &__profile {
@@ -517,6 +524,25 @@ img {
         background-color: #afafaf;
         border-radius: 50%;
         // margin-left: 2rem;
+    }
+
+    &__date {
+        position: absolute;
+        left: 70%;
+
+    }
+
+    // Tablet
+    @media(min-width: 48rem) {
+        padding: auto;
+        margin: 0 3rem;
+        margin-left: 10rem;
+    }
+
+    // Desktop
+    @media(min-width: 80rem) {
+        padding: 0 10rem;
+        padding-left: 8rem;
     }
 
 
