@@ -15,3 +15,11 @@ let comments = [
         comment: "I have a question about this topic."
     }
 ];
+
+function renderComment() {
+    const commentDiv = document.createElement('div');
+    commentDiv.setAttribute('class', 'history__block');
+    console.log('string', commentDiv);
+}
+
+renderComment(); //CALLING THE FUNCTION
