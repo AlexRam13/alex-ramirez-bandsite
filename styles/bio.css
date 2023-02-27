@@ -109,6 +109,13 @@ img {
   font-weight: 300;
 }
 
+.selected-tab {
+  color: #fff;
+  border-bottom: 6px solid #fff;
+  font-weight: 300;
+  padding-bottom: 1.4rem;
+}
+
 @media screen and (min-width: 48rem) {
   .main-nav {
     flex-direction: row;
@@ -287,20 +294,20 @@ img {
 .gallery__cards {
   background-color: #fafafa;
   padding-top: 1rem;
-}
-@media (min-width: 48rem) {
-  .gallery__cards {
-    grid-template-columns: repeat(3, 1fr);
-    display: grid;
-  }
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .gallery__item {
   padding: 0 1rem;
   margin: 1rem 0;
+  width: 100%;
+  max-width: 700px;
 }
 @media (min-width: 48rem) {
   .gallery__item {
     padding: -2rem;
+    width: 30%;
   }
 }
 .gallery__item:hover {
@@ -534,4 +541,7 @@ img {
     position: relative;
     bottom: 4em;
   }
+}
+#comment-container {
+  padding: 0 2rem;
 }/*# sourceMappingURL=bio.css.map */

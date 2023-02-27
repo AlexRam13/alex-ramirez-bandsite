@@ -8,53 +8,93 @@ function loadShows() {
         .then(function (response) {
             console.log(response);
             for (let i = 0; i < response.length; i++) {
-                renderShow(response[i])
+                renderShow(response[i], i === 0)
             }
         })
 }
 
 loadShows()
 
-function renderShow(show) {
-    const showsContainer = document.getElementById("shows-container");
-    const showContainer = document.createElement("div");
+function renderShow(show, isFirstShow = false) {
+    // Create the show container element
+    const showContainer = document.createElement('div');
+    showContainer.classList.add('show-container');
+    const showLabel = document.createElement('h2');
+    showLabel.classList.add('show-label');
+    showLabel.textContent = 'SHOWS';
 
-    const dateContainer = document.createElement("div");
-    dateContainer.setAttribute("class", "'date-container', 'show-element'")
-    const dateLabelTag = document.createElement("p");
-    const dateValueTag = document.createElement("p");
-    dateLabelTag.textContent = "DATE";
-    dateValueTag.textContent = formatDate(show.date);
-    dateContainer.appendChild(dateLabelTag);
-    dateContainer.appendChild(dateValueTag);
+    // Create the date container element and its child elements
+    const dateContainer = document.createElement('div');
+    dateContainer.classList.add('date-container');
 
-    const locationContainer = document.createElement("div");
-    locationContainer.setAttribute("class", "'location-container', 'show-element'")
-    const locationLabelTag = document.createElement("p");
-    const locationValueTag = document.createElement("p");
-    locationLabelTag.textContent = "VENUE";
-    locationValueTag.textContent = show.place;
-    locationContainer.appendChild(locationLabelTag);
-    locationContainer.appendChild(locationValueTag);
+    const dateLabel = document.createElement('p');
+    dateLabel.classList.add('show-label', 'date-label-container');
+    if (!isFirstShow) dateLabel.classList.add('label-not-first');
+    dateLabel.textContent = 'DATE';
 
-    const placeContainer = document.createElement("div");
-    placeContainer.setAttribute("class", "'place-container', 'show-element'")
-    const placeLabelTag = document.createElement("p");
-    const placeValueTag = document.createElement("p");
-    placeLabelTag.textContent = "LOCATION";
-    placeValueTag.textContent = show.location;
-    placeContainer.appendChild(placeLabelTag);
-    placeContainer.appendChild(placeValueTag);
+    const dateValue = document.createElement('p');
+    dateValue.classList.add('date-value-container');
+    dateValue.textContent = formatDate(show.date);
 
-    const buttonContainer = document.createElement("div");
-    buttonContainer.setAttribute("class", "'button-container', 'show-element'")
-    const buyTicketButton = document.createElement("button");
-    buyTicketButton.textContent = "BUY TICKETS";
+    dateContainer.appendChild(dateLabel);
+    dateContainer.appendChild(dateValue);
 
+    // Create the venue container element and its child elements
+    const venueContainer = document.createElement('div');
+    venueContainer.classList.add('venue-container');
+
+    const venueLabel = document.createElement('p');
+    venueLabel.classList.add('show-label', 'venue-label-container');
+    if (!isFirstShow) venueLabel.classList.add('label-not-first');
+    venueLabel.textContent = 'VENUE';
+
+    const venueValue = document.createElement('p');
+    venueValue.classList.add('venue-value-container');
+    venueValue.textContent = show.place;
+
+    venueContainer.appendChild(venueLabel);
+    venueContainer.appendChild(venueValue);
+
+    // Create the location container element and its child elements
+    const locationContainer = document.createElement('div');
+    locationContainer.classList.add('location-container');
+
+    const locationLabel = document.createElement('p');
+    locationLabel.classList.add('show-label', 'location-label-container');
+    if (!isFirstShow) locationLabel.classList.add('label-not-first');
+    locationLabel.textContent = 'LOCATION';
+
+    const locationValue = document.createElement('p');
+    locationValue.classList.add('location-value-container');
+    locationValue.textContent = show.location;
+
+    locationContainer.appendChild(locationLabel);
+    locationContainer.appendChild(locationValue);
+
+    // Create the buy ticket container element and its child elements
+    const buyTicketContainer = document.createElement('div');
+    buyTicketContainer.classList.add('buy-ticket-container', 'first-btn-container');
+
+    const buyTicketButton = document.createElement('button');
+    buyTicketButton.classList.add('buy-ticket-btn');
+    buyTicketButton.textContent = 'BUY TICKETS';
+
+    buyTicketContainer.appendChild(buyTicketButton);
+
+    // Add all the container elements to the show container element
     showContainer.appendChild(dateContainer);
+    showContainer.appendChild(venueContainer);
     showContainer.appendChild(locationContainer);
-    showContainer.appendChild(placeContainer);
-    showContainer.appendChild(buttonContainer);
+    showContainer.appendChild(buyTicketContainer);
 
+    // Add the show container element and a horizontal rule to the shows container element on the page
+    const showsContainer = document.getElementById('shows-container');
+    if (isFirstShow) {
+        showsContainer.appendChild(showLabel);
+    }
     showsContainer.appendChild(showContainer);
-} 
+
+    const horizontalRule = document.createElement('hr');
+    showsContainer.appendChild(horizontalRule);
+}
+
