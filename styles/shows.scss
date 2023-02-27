@@ -83,6 +83,7 @@
 @media (min-width: 48rem) {
     .landing {
 
+
         &__info {
             display: flex;
             flex-direction: column;
@@ -93,6 +94,7 @@
             top: 25rem;
             left: 2rem;
             width: 50%;
+            height: 120%;
         }
 
         &__heading {
